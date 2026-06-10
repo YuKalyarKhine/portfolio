@@ -46,7 +46,7 @@ export default function Hero() {
              <img
               src={profileImg}
               alt="Profile"
-              className="w-full h-full object-cover transition-all duration-500"
+              className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
               onError={(e) => {
                 e.currentTarget.src = "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800";
               }}
