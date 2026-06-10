@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Jost", ui-monospace, SFMono-Regular, monospace;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fafafa;
+  color: #52525b;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body {
+  background-color: #050505;
+  color: #a3a3a3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #18181b;
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  transition: color 0.3s;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #f5f5f5;
+}
+
+.glow-emerald {
+  text-shadow: 0 0 40px rgba(16, 185, 129, 0.2);
+}
+
+.dark .glow-emerald {
+  text-shadow: 0 0 40px rgba(16, 185, 129, 0.4);
+}
